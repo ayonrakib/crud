@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config()
 
 const app = express();
 
-mongoose.connect("mongodb+srv://ayonrakib:ayonrakib@cluster0.54ijf.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect(`${process.env.DATABASE_URL}`);
 
 const db = mongoose.connection;
 db.on('error', (error)=> console.error(error));
