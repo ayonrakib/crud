@@ -1,0 +1,29 @@
+GET http://localhost:4000/subscribers
+
+###
+
+GET http://localhost:4000/subscribers/615783cf91b6d99395cb8c6d
+
+###
+
+POST http://localhost:4000/subscribers
+Content-Type: application/json
+
+{
+    "name" : "Ayon",
+    "subscribedToChannel" : "ayon"
+}
+
+###
+
+DELETE http://localhost:4000/subscribers/61577bc670a17c5b4c69c25c
+
+###
+
+PATCH http://localhost:4000/subscribers/615783cf91b6d99395cb8c6d
+Content-Type: application/json
+
+{
+    "name" : "Rakib",
+    "subscribedToChannel" : "Rakib"
+}
